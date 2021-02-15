@@ -45,14 +45,13 @@ text-decoration: none;
 white-space: pre-line;
 }
 
-.article-img {
-height: 65px;
-width: 65px;
-margin-right: 16px;
+.table{
+  border-spacing: 0;
+  margin: 1rem;
 }
 
-table, th, td {
-  border: 1px solid black;
+.table_row:nth-child(even){
+  background-color: #e5e5e5;
 }
 
 .article-metadata a:hover {
