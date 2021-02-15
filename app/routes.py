@@ -98,4 +98,6 @@ def add_transaction():
 @app.route("/view_transactions",methods=["GET","POST"])
 @login_required
 def view_transactions():
-    pass
+    data = Transaction.query.filter_by(user_id=current_user.id)
+    return render_template("transaction.html",title="View Transactions", data = data)
+
