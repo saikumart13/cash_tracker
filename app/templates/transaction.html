@@ -1,1 +1,21 @@
-{% extends base.html %}
+{% extends "base.html" %}
+{% block content %}
+    {% if data %}
+        <table style="width:100%">
+          <tr>
+            <th>Date</th>
+            <th>Particulars</th>
+            <th>Type</th>
+            <th>Amount</th>
+          </tr>
+        {% for rec in data %}
+          <tr>
+            <td>{{ rec.date }}</td>
+            <td>{{ rec.particulars }}</td>
+            <td>{{ rec.t_type }}</td>
+            <td>{{ rec.amount }}</td>
+          </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+{% endblock content %}
