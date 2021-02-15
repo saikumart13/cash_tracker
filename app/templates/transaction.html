@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% if data %}
-        <table style="width:100%">
+        <table class = "table" style="width:100%">
           <tr>
             <th>Date</th>
             <th>Particulars</th>
@@ -9,7 +9,7 @@
             <th>Amount</th>
           </tr>
         {% for rec in data %}
-          <tr>
+          <tr class="table_row">
             <td>{{ rec.date }}</td>
             <td>{{ rec.particulars }}</td>
             <td>{{ rec.t_type }}</td>
